@@ -1,0 +1,7 @@
+.actions a{
+    width: 200px;
+}
+
+.actions{
+    gap:.8rem;
+}
