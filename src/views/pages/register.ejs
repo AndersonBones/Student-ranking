@@ -4,145 +4,170 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Cadastrar aluno</title>
+        <title>Registrar aluno</title>
+
+        <link rel="icon" type="image/png" href="/images/logo.png"/>
 
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
         <link rel="stylesheet" href="style.css">
-    
+        <link rel="stylesheet" href="responsive.css">
     </head>
+
     <body>
 
-        <div class="container">
-            <h1 class="p-4 text-center">Student Ranking</h1>
+        <div class="container m-auto">
+            <%- include('../partials/logo.ejs') %>
 
 
-            <div id="register-section">
-
-                <form action="/New" method="post" class="row border border-dark rounded mb-3 p-2">
+            <div id="register-section" class="box-shadow text-white col-lg-8 col-md-12 m-auto rounded p-3" style="background-color: #212529;" >
+                
+                <form action="/New" method="post" class="row rounded">
                     
-                    <fieldset class="col-6 mb-5">
-                        <legend>Nome e Nascimento</legend>
-                        
-                        <div class="">
-                            <label for="Fname" class="form-label">Nome Completo</label>
-                            <input type="text" class="form-control" name="nome" value="Mark" required>
-                        </div>
-        
-        
-                        <div class="">
-                            <label for="birthday" class="form-label">Nascimento</label>
-        
-                            <div class="input-group">
-                                <input type="date" name="nascimento" class="form-control" id="birthday" 
-                                aria-describedby="inputGroupPrepend2" required>
+                    <fieldset class="col-12 d-flex p-0">
+                        <fieldset class="col-6 ">
+                            <legend class="mb-3 text-danger">Nome</legend>
+                            
+                            <div class="mb-3">
+                                <label for="Fname" class="form-label">Nome Completo</label>
+                                <input type="text" class="form-control" name="nome" value="Mark" required>
                             </div>
-                        </div>
+            
+                        </fieldset>
+    
+                        <fieldset class="col-lg-3 col-md-5">
+                            <legend class="mb-3 text-danger">Nascimento</legend>
+                            <div class="">
+                                <label for="birthday" class="form-label">Nascimento</label>
+            
+                                <div class="input-group">
+                                    <input type="date" name="nascimento" class="form-control" id="birthday" 
+                                    aria-describedby="inputGroupPrepend2" required>
+                                </div>
+                            </div>
+                        </fieldset>
                     </fieldset>
                     
-                    <fieldset class="col-6">
-                        <legend>Turma</legend>
+                    
+                    <fieldset class="col-6 d-flex mt-3 mb-4">
+                        <legend class="mb-3 text-danger">Turma</legend>
 
-                        <div class="">
-                            <label for="ano" class="form-label">Ano</label>
-        
-                            <select class="form-select" name="ano" required>
-                                <option selected value="6°">6° Ano</option>
-                                <option value="7°">7° Ano</option>
-                                <option value="8°">8° Ano</option>
-                                <option value="9°">9° Ano</option>
-                            </select>
-                        </div>
+                        <fieldset class="col-5 p-0">
+                            <legend style="font-size: 1rem;">Sala</legend>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                <label class="form-check-label" for="flexRadioDefault1">A</label>
+                            </div>
+    
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                <label class="form-check-label" for="flexRadioDefault2">B</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                <label class="form-check-label" for="flexRadioDefault2">c</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                <label class="form-check-label" for="flexRadioDefault2">c</label>
+                            </div>
+                        </fieldset>
                         
-                        <div class="">
-                            <label for="sala" class="form-label">Sala</label>
-        
-                            <select class="form-select" name="sala" required>
-                                <option selected value="A">A</option>
-                                <option value="B">B</option>
-                                <option value="C">C</option>
-                                <option value="D">D</option>
-                            </select>
-                        </div>
-        
+                        
+                        <fieldset class="col-5 p-0">
+                            <legend style="font-size: 1rem;">Ano</legend>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                <label class="form-check-label" for="flexRadioDefault1">6°</label>
+                            </div>
+    
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                <label class="form-check-label" for="flexRadioDefault2">7°</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                <label class="form-check-label" for="flexRadioDefault2">8°</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                <label class="form-check-label" for="flexRadioDefault2">9°</label>
+                            </div>
+                        </fieldset>
+
                     </fieldset>
                     
 
-                    <fieldset class="col-12 notas-input mb-5 m-0">
-
-                        <div class="row col-12">
-                            <legend>Notas</legend>
-
-                            <div class="col-6 p-0" >
-                                <div class="col-4 p-0">
-                                    <label for="nota1" class="form-label">Língua portuguesa</label>
-                                    <input type="number" name="lingua_portuguesa" max="10" maxlength="3" class="form-control" required>
-                                </div>
-                
-                                <div class="col-4 p-0">
-                                    <label for="nota2" class="form-label">Matemática</label>
-                                    <input type="number" name="matematica" max="10" maxlength="3" class="form-control"   required>
-                                </div>
-
-                                <div class="col-4 p-0">
-                                    <label for="nota3" class="form-label">Biologia</label>
-                                    <input type="number" name="biologia" max="10" maxlength="3" class="form-control"  required>
-                                </div>
+                    <fieldset class="col-12 d-flex notas-input mb-5 m-0">
+                        <legend class="text-danger mb-3 mt-4">Notas</legend>
+                        
+                        <div class="col-6 d-flex flex-column m-auto p-0 d-flex justify-content-between" style="gap: 2px;" >
+                            <div class="col-12  p-0">
+                                <label for="nota1" class="form-label">Língua portuguesa</label>
+                                <input type="number" name="lingua_portuguesa" max="10" maxlength="3" class="form-control col-7" required>
+                            </div>
+            
+                            <div class="col-12 p-0">
+                                <label for="nota2" class="form-label">Matemática</label>
+                                <input type="number" name="matematica" max="10" maxlength="3" class="form-control col-7"   required>
                             </div>
 
-                            <div class="col-6 p-0">
-                                <div class="col-4 p-0">
-                                    <label for="nota4" class="form-label">Física</label>
-                                    <input type="number" max="10" name="fisica" maxlength="3" class="form-control" required>
-                                </div>
-                
-                                <div class="col-4 p-0">
-                                    <label for="nota5" class="form-label">Química</label>
-                                    <input type="number" max="10" name="quimica" maxlength="3" class="form-control"   required>
-                                </div>
+                            <div class="col-12 p-0">
+                                <label for="nota3" class="form-label">Biologia</label>
+                                <input type="number" name="biologia" max="10" maxlength="3" class="form-control col-7"  required>
+                            </div>
 
-                                <div class="col-4 p-0">
-                                    <label for="nota6" class="form-label">Artes</label>
-                                    <input type="number" max="10" name="artes" maxlength="3" class="form-control"  required>
-                                </div>
+                            <div class="col-12 p-0">
+                                <label for="nota4" class="form-label">Física</label>
+                                <input type="number" max="10" name="fisica" maxlength="3" class="form-control col-7" required>
+                            </div>
+            
+                            <div class="col-12 p-0">
+                                <label for="nota5" class="form-label">Química</label>
+                                <input type="number" max="10" name="quimica" maxlength="3" class="form-control col-7"   required>
+                            </div>
+
+                            <div class="col-12 p-0">
+                                <label for="nota6" class="form-label">Artes</label>
+                                <input type="number" max="10" name="artes" maxlength="3" class="form-control col-7"  required>
                             </div>
                         </div>
-                        
 
-                        <div class="row col-12">
-
-                            <div class="col-6 p-0">
-                                <div class="col-4 p-0">
-                                    <label for="nota7" class="form-label">Educação Física</label>
-                                    <input type="number" name="ed_fisica" max="10" maxlength="3" class="form-control" required>
-                                </div>
-                
-                                <div class="col-4 p-0">
-                                    <label for="nota8" class="form-label">Língua Inglesa</label>
-                                    <input type="number" name="lingua_inglesa" max="10" maxlength="3" class="form-control"   required>
-                                </div>
-
-                                <div class="col-4 p-0">
-                                    <label for="nota9" class="form-label">Filosofia</label>
-                                    <input type="number" name="filosofia" max="10" maxlength="3" class="form-control"  required>
-                                </div>
+                        <div class="col-6 m-auto p-0 d-flex flex-column" style="gap: 2px;">
+                            <div class="col-12 p-0">
+                                <label for="nota7" class="form-label">Educação Física</label>
+                                <input type="number" name="ed_fisica" max="10" maxlength="3" class="form-control col-7" required>
+                            </div>
+            
+                            <div class="col-12 p-0">
+                                <label for="nota8" class="form-label">Língua Inglesa</label>
+                                <input type="number" name="lingua_inglesa" max="10" maxlength="3" class="form-control col-7"   required>
                             </div>
 
-                            <div class="col-6 p-0">
-                                <div class="col-4 p-0">
-                                    <label for="nota10" class="form-label">Geografia</label>
-                                    <input type="number" max="10" name="geografia" maxlength="3" class="form-control" required>
-                                </div>
-                
-                                <div class="col-4 p-0">
-                                    <label for="nota11" class="form-label">História</label>
-                                    <input type="number" max="10" name="historia" maxlength="3" class="form-control"   required>
-                                </div>
+                            <div class="col-12 p-0">
+                                <label for="nota9" class="form-label">Filosofia</label>
+                                <input type="number" name="filosofia" max="10" maxlength="3" class="form-control col-7"  required>
+                            </div>
 
-                                <div class="col-4 p-0">
-                                    <label for="nota12" class="form-label">Sociologia</label>
-                                    <input type="number" max="10" name="sociologia" maxlength="3" class="form-control"  required>
-                                </div>
+                            <div class="col-12 p-0">
+                                <label for="nota10" class="form-label">Geografia</label>
+                                <input type="number" max="10" name="geografia" maxlength="3" class="form-control col-7 " required>
+                            </div>
+            
+                            <div class="col-12 p-0">
+                                <label for="nota11" class="form-label">História</label>
+                                <input type="number" max="10" name="historia" maxlength="3" class="form-control col-7"   required>
+                            </div>
+
+                            <div class="col-12 p-0">
+                                <label for="nota12" class="form-label">Sociologia</label>
+                                <input type="number" max="10" name="sociologia" maxlength="3" class="form-control col-7"  required>
                             </div>
                         </div>
                     </fieldset>
@@ -151,18 +176,24 @@
                     <div class="col-12 mb-3">
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
-                            <label class="form-check-label" for="invalidCheck2"> Agree to terms and conditions</label>
+                            <label class="form-check-label" for="invalidCheck2"> Concordo com os termos e condições</label>
                         </div>
                     </div>
     
                     <div class="col-12">
-                        <button id="addStudent" class="btn btn-primary" type="submit">Cadastrar</button>
-                        <a href="/" class="btn text-primary back-btn">Voltar</a>
+                        <button id="addStudent" class="btn btn-primary box-shadow" type="submit">Cadastrar</button>
+                        <a href="/" class="btn text-warning">Voltar</a>
                     </div>
                 </form>
             </div>
 
+            <br>
+            <br>
+
+
         </div>
+
+        <%- include('../partials/footer.ejs') %>
         
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 

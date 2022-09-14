@@ -27,7 +27,7 @@ async function Registrar(req, res){
     }
 
     let aluno = {
-        nome:alunoModel.setName(req.body.nome), 
+        nome:alunoModel.setNome(req.body.nome), 
         nascimento:req.body.nascimento,
         ano:req.body.ano,
         sala:req.body.sala,

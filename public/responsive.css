@@ -1,0 +1,60 @@
+@media only screen and (max-width: 800px) {
+
+    .logo{
+        gap: .7rem;
+    }
+
+    .search--component{
+        width: 100% !important;
+    }
+    .home{
+        width: 100%;
+        flex-direction: column;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .home div{
+        width: 100% !important;
+    }
+
+    .home-actions--header img{
+        width: 100px;
+    }
+
+    .home-actions--header h5{
+        font-size: 2.5rem;
+    }
+
+    .home-header--info p{
+        font-size: 1.4rem;
+    }
+
+    .home-actions--btns a{
+        width: 80%;
+        font-size: 1.5rem;
+    }
+    .home-actions--btns{
+        gap: 1.8rem;
+        padding-bottom: 1rem;
+    }
+
+    .search-area{
+        width: 100% !important;
+    }
+
+    #not-found-student{
+        font-size: 1.5rem;
+
+    }
+
+
+}
+
+
+@media only screen and (max-width: 800px) {
+    .logo h1{
+        font-size: 1.8rem;
+    }
+}

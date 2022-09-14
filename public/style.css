@@ -1,8 +1,59 @@
-.actions a{
-    width: 200px;
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background: #141E30;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+
 }
 
-.actions{
-    gap:.8rem;
+.logo{
+    text-decoration: none !important;
+    gap: 1rem;
 }
 
+.logo h1{
+    font-size: 2.5rem;
+}
+
+.logo img{
+    width: 70px;
+}
+.home{
+    width: 700px;
+    height: 400px;
+    overflow: hidden;
+
+    background-color: transparent;
+
+}
+
+.home-actions{
+    background-color: transparent ;
+}
+.home-actions--btns{
+    gap: 1rem;
+}
+
+.home-actions--btns a{
+    width: 60%;
+    font-size: 1rem;
+}
+.home-header--info{
+    width: 80%;
+}
+.home-header--info p{
+    font-size: .8rem;
+}
+
+.search-area{
+    width: 80% !important;
+}
+
+.box-shadow{
+    box-shadow: 5px 5px 10px #141E30;
+}
