@@ -54,6 +54,11 @@ body{
     width: 80% !important;
 }
 
+select{
+    outline: none;
+    
+}
+
 .box-shadow{
     box-shadow: 5px 5px 10px #141E30;
 }
