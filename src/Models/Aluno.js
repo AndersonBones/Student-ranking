@@ -5,18 +5,13 @@ const setNotas = (aluno)=>{
     return total;
 }
 
-const setRanking = (doc)=>{
+const setPosition = (alunos)=>{
 
-
-    doc.sort(function(a,b) {
-        return b.notaTotal - a.notaTotal;
-    });
-
-    doc.map(item=>{
-        item.pos = doc.indexOf(item)+1;
+    alunos.map(item=>{
+        item.pos = alunos.indexOf(item)+1;
     })
 
-    return doc;
+    return alunos;
 }
 
 const setNome = (nome) =>{
@@ -39,4 +34,4 @@ const getAluno = (array, aluno)=>{
 
     return Alunos;
 }
-module.exports = {setRanking, setNotas, setNome, getAluno};
+module.exports = {setPosition, setNotas, setNome, getAluno};

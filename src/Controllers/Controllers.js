@@ -1,5 +1,5 @@
 const Aluno = require("../Models/alunoSchema");
-const alunoModel = require('../Models/alunoModel');
+const alunoModel = require('../Models/Aluno');
 
 const home = (req, res)=>{
     res.render('pages/home')
@@ -46,8 +46,10 @@ async function Registrar(req, res){
 
 async function getRanking(req, res){
     try {
-        let doc = await Aluno.find({});
-        let alunos = alunoModel.setRanking(doc)
+        let alunos = await Aluno.find({notaTotal:{$gt:0}}).sort({notaTotal: -1});
+        
+        alunoModel.setPosition(alunos)
+
         res.render('pages/ranking',{alunos})
         
     } catch (error) {
@@ -64,8 +66,8 @@ async function searchAluno (req, res){
         nome = alunoModel.setNome(String(req.query.q))
 
         try {
-            let all_alunos = await Aluno.find({});
-            let resultAlunos = alunoModel.getAluno(alunoModel.setRanking(all_alunos), nome);
+            let all_alunos = await Aluno.find({notaTotal:{$gt:0}}).sort({notaTotal: -1});
+            let resultAlunos = alunoModel.getAluno(alunoModel.setPosition(all_alunos), nome);
         
             res.render('pages/search',{resultAlunos, req})
              
