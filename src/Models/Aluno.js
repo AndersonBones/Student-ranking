@@ -29,7 +29,7 @@ const setNome = (nome) =>{
 
 const getAluno = (array, aluno)=>{
     let Alunos = array.filter(item =>{
-        return item.nome === aluno;
+        return item.nome.includes(aluno);
     })
 
     return Alunos;
