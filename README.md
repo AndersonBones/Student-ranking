@@ -12,4 +12,4 @@ Registra as notas do aluno, permite a busca do dados do aluno e exibe o ranking 
 <img src="/public/images/screen.gif" alt="">
 
 ### Demo
-<a href="https://s-ranking.herokuapp.com/">Live Demo</a>
+<a href="https://student-ranking.onrender.com/">Live Demo</a>
